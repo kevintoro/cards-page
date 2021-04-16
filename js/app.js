@@ -1,4 +1,4 @@
-fetch('../data/data.json')
+fetch('https://carlosreneas.github.io/endpoints/cartas.json')
   .then(response => response.json())
   .then(value => saveDataLocalStorage(value));
 
@@ -8,7 +8,7 @@ function saveDataLocalStorage(value) {
   if (typeof data !== 'undefined' && data !== null) {
     loadTable(data);
   } else {
-    window.localStorage.setItem('cards', JSON.stringify(value));
+    window.localStorage.setItem('cards', JSON.stringify(value.data));
     let data = window.localStorage.getItem('cards');
     loadTable(data);
   }
@@ -20,7 +20,7 @@ function loadTable(data) {
   tbody.innerHTML = '';
   for (let i = 0; i < info.length; i++) {
     const tr = document.createElement('tr');
-    tr.innerHTML = `<td>${info[i].numero}</td><td>${info[i].carta}</td><td>${info[i].cantidad}</td>`;
+    tr.innerHTML = `<td>${info[i].numero}</td><td>${info[i].carta}</td><td>${info[i].valor}</td>`;
     tbody.appendChild(tr);
   }
 }
@@ -69,7 +69,7 @@ function loadCard(card) {
   for (let i = 0; i < data.length; i++) {
     if (data[i].carta.toLowerCase() === card.toLowerCase()) {
       exist = true;
-      data[i].cantidad = (parseInt(data[i].cantidad) + 1).toString();
+      data[i].valor = (parseInt(data[i].valor) + 1).toString();
     }
   }
 
@@ -77,7 +77,7 @@ function loadCard(card) {
     let new_card = {
       "numero": (data.length + 1).toString(),
       "carta": card,
-      "cantidad": "1"
+      "valor": "1"
     };
     data.push(new_card);
   }
@@ -105,7 +105,7 @@ button.addEventListener('click', ev => {
       let new_card = {
         "numero": num.value,
         "carta": card.value,
-        "cantidad": "0"
+        "valor": "0"
       };
       data.push(new_card);
     }
