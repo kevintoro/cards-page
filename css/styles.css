@@ -1,0 +1,214 @@
+/*
+  Google Fonts
+*/
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+
+* {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+}
+
+#full-header {
+  width: 100%;
+  padding-top: 50px;
+  padding-left: 20px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.header-icon {
+  height: 150px;
+}
+
+/*
+  Containers
+*/
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.row {
+  width: 95%;
+  display: flex;
+}
+
+.col-50 {
+  width: 50%;
+  position: relative;
+  padding: 10px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 10px;
+}
+
+.card {
+  height: 200px;
+}
+
+.mt {
+  margin-top: 50px;
+}
+
+.mb {
+  margin-bottom: 50px;
+}
+
+/*
+  Table Style
+*/
+
+.styled-table {
+  border-collapse: collapse;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+}
+
+.styled-table thead tr {
+  background-color: #f7423f;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #f7423f;
+}
+
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  color: #f7423f;
+}
+
+/*
+  Card form
+*/
+
+.form-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.form-card-title {
+  font-size: 24px;
+  margin: 20px 0;
+  color: #f7423f;
+}
+
+.form-card-login {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-top: 30px;
+  width: 55%;
+}
+
+.form-label {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.form-control {
+  display: block;
+  margin: 10px 0;
+  padding: 10px 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline-color: #dddddd;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+}
+
+.form-error-message {
+  color: #f7423f;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.form-btn {
+  padding: 10px 30px;
+  background-color: #f7423f;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+}
+
+/*
+  Responsive Design
+*/
+
+@media screen and (max-width: 1200px) {
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 924px) {
+  .cards-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .col-50 {
+    width: 100%;
+    display: block;
+  }
+
+  .row {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #full-header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .header-icon {
+    width: 30%;
+    height: auto;
+  }
+
+  .form-card-login {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .header-icon {
+    width: 50%;
+    height: auto;
+  }
+}
