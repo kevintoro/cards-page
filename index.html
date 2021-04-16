@@ -1,34 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Login</title>
-  <link rel="stylesheet" href="./css/styles.css">
-  <link rel="shortcut icon" href="./assets/icon/poker_icon.jpg" type="image/x-icon">
-</head>
-<body>
-<header id="full-header">
-  <img src="./assets/icon/icon_showdown.jpg" class="header-icon" alt="">
-</header>
-<section>
-  <div class="container">
-    <div class="form-card-login">
-      <h5 class="form-card-title">Inicio de sesión</h5>
-      <form id="login-form">
-        <label for="user" class="form-label">Usuario</label>
-        <input type="text" id="user" class="form-control" placeholder="gato con botas" required>
-        <p class="form-error-message" id="form-user-error"></p>
-        <label for="password" class="form-label">Contraseña</label>
-        <input type="password" id="password" class="form-control" placeholder="contraseña" required>
-        <p class="form-error-message" id="form-password-error"></p>
-        <button type="submit" class="form-btn" id="form-login-button">Ingresar</button>
-      </form>
-    </div>
-  </div>
-</section>
-<script src="js/index.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/icon/poker_icon.jpg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header id="full-header">
+      <img src="./assets/icon/icon_showdown.jpg" class="header-icon" alt="" />
+    </header>
+    <section>
+      <div class="container">
+        <div class="form-card-login">
+          <h5 class="form-card-title">Inicio de sesión</h5>
+          <form id="login-form">
+            <label for="user" class="form-label">Usuario</label>
+            <input
+              type="text"
+              id="user"
+              class="form-control"
+              placeholder="gato con botas"
+              required
+            />
+            <p class="form-error-message" id="form-user-error"></p>
+            <label for="password" class="form-label">Contraseña</label>
+            <input
+              type="password"
+              id="password"
+              class="form-control"
+              placeholder="contraseña"
+              required
+            />
+            <p class="form-error-message" id="form-password-error"></p>
+            <button type="submit" class="form-btn-block" id="form-login-button">
+              Ingresar
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script src="js/index.js"></script>
+  </body>
 </html>
